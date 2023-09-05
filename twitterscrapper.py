@@ -38,7 +38,7 @@ def tweets_scrap(keyword, start_date, end_date, count):
 def upload_to_mongodb(df, keyword):
     today = date.today().strftime("%d-%m-%Y")
     client = pymongo.MongoClient(
-        "mongodb+srv://iswarya:<password>@cluster0.btxtni3.mongodb.net/?retryWrites=true&w=majority") #Making connection between atlas mongobd and python
+        "mongodb+srv://test:<password>@cluster0.btxtni3.mongodb.net/?retryWrites=true&w=majority") #Making connection between atlas mongobd and python
     db = client["Twitter"]
     col = db["Tweets"]
     for index, row in df.iterrows():
